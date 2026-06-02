@@ -1,0 +1,45 @@
+[project]
+name = "lean-coder-llm"
+version = "0.0.1"
+requires-python = ">=3.10"
+description = "LeanCoder - A lightweight coding-focused LLM adaptation pipeline"
+dependencies = [
+    # Core ML
+    "torch>=2.4.0",
+    "transformers>=4.43.0",
+    "tokenizers>=0.15.0",
+    "accelerate>=0.33.0",
+    "datasets>=3.0.0",
+
+    # Efficient fine-tuning
+    "peft>=0.12.0",
+    "bitsandbytes>=0.43.0",
+
+    # Training utilities
+    "trl>=0.9.0",
+
+    # Configuration
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+
+    # Testing
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100

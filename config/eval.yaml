@@ -1,0 +1,25 @@
+# Evaluation Configuration
+
+sandbox:
+  timeout_seconds: 30
+  memory_limit_mb: 512
+  allow_network: false
+
+metrics:
+  # Number of samples per problem for pass@k calculation
+  n_samples: [10, 50]
+  temperature: 0.2
+  top_p: 0.95
+  max_new_tokens: 512
+
+generation:
+  do_sample: true
+  num_return_sequences: 1
+
+problems:
+  # Path to eval problems (HumanEval/MBPP format)
+  path: "data/eval/problems.json"
+
+reporting:
+  outputs_dir: "outputs/eval"
+  include_details: true

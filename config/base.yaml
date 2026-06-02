@@ -1,0 +1,18 @@
+# Base Model Configuration
+model:
+  repo_id: "Qwen/Qwen2.5-Coder-7B-Instruct"
+  revision: "main"
+  expected_license: "apache-2.0"
+  trust_remote_code: true
+
+download:
+  use_auth_token: true
+  save_path: "artifacts/base/Qwen2.5-Coder-7B-Instruct"
+
+architecture:
+  # Expected architecture details (verified after download)
+  context_length: 32768
+  vocab_size: 151936
+  hidden_size: 4096
+  num_layers: 28
+  num_attention_heads: 32

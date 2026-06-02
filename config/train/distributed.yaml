@@ -1,0 +1,66 @@
+# Distributed Training Configuration
+
+distributed:
+  # Strategy: "fsdp", "deepspeed", "ddp", or None
+  strategy: "fsdp"
+
+  # Number of GPUs to use
+  num_gpus: 4
+
+  # CPU offloading
+  cpu_offload: true
+
+  # Mixed precision
+  mixed_precision: "bf16"  # "bf16", "fp16", or "no"
+
+# FSDP-specific settings
+fsdp:
+  # Sharding strategy: "FULL_SHARD", "SHARD_GRAD_OP", "NO_SHARD"
+  sharding_strategy: "FULL_SHARD"
+
+  # CPU offloading
+  cpu_ram_efficient_loading: true
+
+  # State dict type for saving
+  state_dict_type: "FULL_STATE_DICT"
+
+  # Offload parameters to CPU
+  offload_params: true
+
+  # Auto wrap policy
+  auto_wrap_policy: "TRANSFORMER_BASED_WRAP"
+
+# DeepSpeed-specific settings
+deepspeed:
+  # Stage: 1, 2, or 3
+  stage: 2
+
+  # Offload optimizer
+  offload_optimizer: true
+
+  # Offload parameters
+  offload_parameters: false
+
+  # Bucket size
+  bucket_size: 5e8
+
+# Training adjustments for distributed
+training:
+  # Scale batch size by num_gpus
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 4
+
+  # Gradient accumulation steps
+  gradient_accumulation_steps: 4
+
+  # Number of validation steps to skip
+  eval_steps: 100
+
+  # Logging
+  logging_steps: 10
+
+# Hardware requirements
+hardware:
+  min_vram_per_gpu: 24  # GB
+  recommended_num_gpus: 4
+  total_vram: 96  # GB for 4 GPUs

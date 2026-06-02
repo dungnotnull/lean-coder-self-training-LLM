@@ -1,0 +1,5 @@
+{"prompt": "Write a function to add two numbers.", "response": "def add(a, b):\n    return a + b"}
+{"prompt": "Write a function to subtract two numbers.", "response": "def sub(a, b):\n    return a - b"}
+{"prompt": "Write a function to multiply two numbers.", "response": "def multiply(a, b):\n    return a * b"}
+{"prompt": "Write a function to divide two numbers.", "response": "def divide(a, b):\n    if b == 0:\n        raise ValueError('Cannot divide by zero')\n    return a / b"}
+{"prompt": "Write a function to check if a number is even.", "response": "def is_even(n):\n    return n % 2 == 0"}

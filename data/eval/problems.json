@@ -1,0 +1,54 @@
+{
+  "problems": [
+    {
+      "id": "sample_001",
+      "description": "Write a function that adds two numbers.",
+      "starter_code": "def add(a, b):\n    ",
+      "tests": [
+        "assert add(1, 2) == 3",
+        "assert add(-1, 1) == 0",
+        "assert add(0, 0) == 0"
+      ]
+    },
+    {
+      "id": "sample_002",
+      "description": "Write a function that returns the length of a list.",
+      "starter_code": "def list_length(lst):\n    ",
+      "tests": [
+        "assert list_length([]) == 0",
+        "assert list_length([1]) == 1",
+        "assert list_length([1, 2, 3]) == 3"
+      ]
+    },
+    {
+      "id": "sample_003",
+      "description": "Write a function that checks if a number is even.",
+      "starter_code": "def is_even(n):\n    ",
+      "tests": [
+        "assert is_even(2) == True",
+        "assert is_even(3) == False",
+        "assert is_even(0) == True"
+      ]
+    },
+    {
+      "id": "sample_004",
+      "description": "Write a function that returns the maximum of two numbers.",
+      "starter_code": "def max_of_two(a, b):\n    ",
+      "tests": [
+        "assert max_of_two(5, 3) == 5",
+        "assert max_of_two(1, 10) == 10",
+        "assert max_of_two(7, 7) == 7"
+      ]
+    },
+    {
+      "id": "sample_005",
+      "description": "Write a function that reverses a string.",
+      "starter_code": "def reverse_string(s):\n    ",
+      "tests": [
+        "assert reverse_string('hello') == 'olleh'",
+        "assert reverse_string('') == ''",
+        "assert reverse_string('a') == 'a'"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# QLoRA Fine-tuning Configuration
+
+model:
+  base_model_path: "artifacts/base/Qwen2.5-Coder-7B-Instruct"
+  trust_remote_code: true
+
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  lora_dropout: 0.05
+  bias: "none"
+
+training:
+  output_dir: "artifacts/qlora_checkpoints"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate: 2.0e-4
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 100
+  eval_steps: 100
+  bf16: true
+  gradient_checkpointing: true
+  max_grad_norm: 1.0
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
+
+data:
+  train_path: "data/train/ds-v1_train.jsonl"
+  val_path: "data/val/ds-v1_val.jsonl"
+  max_length: 2048
+
+manifest:
+  log_path: "outputs/train"

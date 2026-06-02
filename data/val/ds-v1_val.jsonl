@@ -1,0 +1,2 @@
+{"prompt": "Write a function to find the maximum of two numbers.", "response": "def max_of_two(a, b):\n    return a if a > b else b"}
+{"prompt": "Write a function to find the minimum of two numbers.", "response": "def min_of_two(a, b):\n    return a if a < b else b"}

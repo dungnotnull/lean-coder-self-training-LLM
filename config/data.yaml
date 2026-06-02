@@ -1,0 +1,29 @@
+# Data Pipeline Configuration
+
+pipeline:
+  output_dir: "data"
+
+cleaning:
+  remove_secrets: true
+  remove_pii: true
+  min_length: 10
+  max_length: 10000
+
+dedup:
+  method: "exact_and_near"
+  similarity_threshold: 0.9
+
+formatting:
+  template: "qwen"
+  max_length: 2048
+
+sources:
+  - name: "sample_coding_qa"
+    path: "data/raw/coding_qa.jsonl"
+    type: "jsonl"
+    license: "apache-2.0"
+
+split:
+  train_ratio: 0.8
+  val_ratio: 0.1
+  holdout_ratio: 0.1
