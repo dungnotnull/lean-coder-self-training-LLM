@@ -1,4 +1,4 @@
-# <img src="docs/assets/logo.png" alt="LeanCoder Logo" width="200"/>
+# <img src="media/opencli.png" alt="LeanCoder Logo" width="200"/>
 
 # LeanCoder: Lean, Adaptable LLM Fine-Tuning Pipeline
 
@@ -37,7 +37,7 @@ Democratize LLM fine-tuning by providing a **complete, reproducible pipeline** t
 ### Installation
 
 ```bash
-git clone https://github.com/dungnotull/lean-coder-self-training-LLM.git
+git clone https://github.com/dungnotnull/lean-coder-self-training-LLM.git
 cd lean-coder-self-training-LLM
 
 python -m venv venv
@@ -402,7 +402,7 @@ If you use LeanCoder in your research:
   title={LeanCoder: Lean LLM Fine-Tuning Pipeline},
   author={Dung},
   year={2024},
-  url={https://github.com/dungnotull/lean-coder-self-training-LLM},
+  url={https://github.com/dungnotnull/lean-coder-self-training-LLM},
 }
 ```
 
@@ -418,8 +418,8 @@ If you use LeanCoder in your research:
 ## 📞 Support
 
 - 📖 [Documentation](docs/)
-- 🐛 [Issues](https://github.com/dungnotull/lean-coder-self-training-LLM/issues)
-- 💬 [Discussions](https://github.com/dungnotull/lean-coder-self-training-LLM/discussions)
+- 🐛 [Issues](https://github.com/dungnotnull/lean-coder-self-training-LLM/issues)
+- 💬 [Discussions](https://github.com/dungnotnull/lean-coder-self-training-LLM/discussions)
 
 ---
 
