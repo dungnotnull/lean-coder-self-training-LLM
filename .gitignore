@@ -47,5 +47,8 @@ Thumbs.db
 .coverage
 htmlcov/
 
+# Agent config
+.commandcode/
+
 # Logs
 *.log
