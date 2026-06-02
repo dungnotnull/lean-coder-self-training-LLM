@@ -1,4 +1,6 @@
-# <img src="media/opencli.png" alt="LeanCoder Logo" width="200"/>
+<div align="center">
+  <img src="media/opencli.png" alt="LeanCoder Logo" width="300" style="display: block; margin: 0 auto 20px auto;"/>
+</div>
 
 # LeanCoder: Lean, Adaptable LLM Fine-Tuning Pipeline
 
@@ -12,6 +14,7 @@
 ## 🎯 Mission
 
 Democratize LLM fine-tuning by providing a **complete, reproducible pipeline** that:
+
 - ✅ Works on consumer hardware (single GPU)
 - ✅ Measures everything via executable benchmarks
 - ✅ Improves monotonically through gated data+eval loops
@@ -19,18 +22,18 @@ Democratize LLM fine-tuning by providing a **complete, reproducible pipeline** t
 
 ## 🌟 Key Features
 
-| Feature | Description |
-|---------|-------------|
-| **QLoRA Fine-Tuning** | Train on 4-bit quantized base—7B models on 24GB VRAM |
-| **Docker Sandboxed Eval** | Safe code execution with resource limits |
-| **Comprehensive Benchmarks** | HumanEval (164), MBPP (974), LeetCode-style problems |
-| **Resumable Training** | Save/restore from any checkpoint—no lost progress |
-| **Multi-GPU Support** | FSDP and DeepSpeed for distributed training |
-| **Real-time Dashboard** | Web UI for monitoring training & metrics |
-| **Auto Hyperparameter Search** | Optuna-powered optimization |
-| **Model Ensemble** | Combine top checkpoints via weighted voting |
-| **Knowledge Core** | Gated improvement loop for continuous gains |
-| **Production API** | FastAPI inference server ready for deployment |
+| Feature                        | Description                                          |
+| ------------------------------ | ---------------------------------------------------- |
+| **QLoRA Fine-Tuning**          | Train on 4-bit quantized base—7B models on 24GB VRAM |
+| **Docker Sandboxed Eval**      | Safe code execution with resource limits             |
+| **Comprehensive Benchmarks**   | HumanEval (164), MBPP (974), LeetCode-style problems |
+| **Resumable Training**         | Save/restore from any checkpoint—no lost progress    |
+| **Multi-GPU Support**          | FSDP and DeepSpeed for distributed training          |
+| **Real-time Dashboard**        | Web UI for monitoring training & metrics             |
+| **Auto Hyperparameter Search** | Optuna-powered optimization                          |
+| **Model Ensemble**             | Combine top checkpoints via weighted voting          |
+| **Knowledge Core**             | Gated improvement loop for continuous gains          |
+| **Production API**             | FastAPI inference server ready for deployment        |
 
 ## 🚀 Quick Start
 
@@ -132,6 +135,7 @@ LeanCoder evaluates via **executable code**—no vibes, only measured results.
 ### Sandbox
 
 All code executes in **Docker containers** with:
+
 - ⏱️ Execution timeout
 - 💾 Memory limits
 - 🚫 No network access
@@ -140,30 +144,39 @@ All code executes in **Docker containers** with:
 ## 🔄 Pipeline Stages
 
 ### Phase 0: Setup + Baseline
+
 Download base model → Establish baseline metrics
 
 ### Phase 1: Data Build
+
 Collect → Clean → Dedup → Format → Version dataset
 
 ### Phase 2: QLoRA Fine-Tuning
+
 Load 4-bit base → Train LoRA adapters → Save checkpoint
 
 ### Phase 3: Compression
+
 Quantize (GGUF/AWQ/GPTQ) → Re-evaluate → Document trade-offs
 
 ### Phase 4: Promotion Registry
+
 Compare vs. best → Promote only if better → Update pointer
 
 ### Phase 4.5: Knowledge Core
+
 Capture failures → Quality gate → New dataset → Retrain → Measure
 
 ### Phase 5: DPO/Distillation
+
 Preference optimization or teacher-student distillation
 
 ### Phase 6: Serving
+
 Load best model → Start FastAPI server → Query via API
 
 ### Phase 7: Release
+
 Documentation → Reproducibility checks → Tag v1.0
 
 ## 🎓 Tutorials
@@ -235,6 +248,7 @@ python -m src.serve.dashboard.app
 ```
 
 Features:
+
 - 📊 Real-time training curves
 - 📈 Registry history
 - 🧠 Knowledge brain timeline
@@ -264,6 +278,7 @@ manager.register_plugin(MyPlugin())
 ```
 
 Built-in plugins:
+
 - **Weights & Biases** - Experiment tracking
 - **Slack Notifier** - Notifications
 - **Metrics Exporter** - Export to JSON/CSV
